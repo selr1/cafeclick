@@ -116,13 +116,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Welcome to ${mahallah?.name.replaceAll('Mahallah ', '') ?? ''} Cafe',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/logo.png',
+                                height: 40,
+                                errorBuilder: (context, error, stackTrace) => const Icon(Icons.coffee, color: Colors.white),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  'Welcome to ${mahallah?.name.replaceAll('Mahallah ', '') ?? ''} Cafe',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 8),
                           const Text(
