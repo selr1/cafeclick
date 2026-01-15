@@ -83,7 +83,7 @@ class _MenuCustomizationSheetState extends State<MenuCustomizationSheet> {
                       // Image
                       ClipRRect(
                         borderRadius: BorderRadius.circular(16),
-                        child: Image.network(
+                        child: Image.asset(
                           item.image,
                           width: double.infinity,
                           height: 200,
