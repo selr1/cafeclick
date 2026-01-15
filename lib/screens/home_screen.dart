@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentTab = 0;
 
+  final List<MenuItem> _menuItems = [
     MenuItem(
       id: '1',
       name: 'Nasi Goreng USA',
