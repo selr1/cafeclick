@@ -115,7 +115,7 @@ class AppState extends ChangeNotifier {
   // Actions
   bool login(String identifier, String password) {
     // Mock Login Logic
-    if (identifier == 'admin' && password == 'admin') {
+    if ((identifier == 'admin' && password == 'admin') || (identifier == 'staff' && password == '123')) {
       _currentUser = User(
         id: '2',
         name: 'Cafe Staff',
