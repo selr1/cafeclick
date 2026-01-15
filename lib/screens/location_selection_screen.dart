@@ -35,7 +35,7 @@ class LocationSelectionScreen extends StatelessWidget {
               const SizedBox(height: 24),
 
               // Search Bar
-              TextField(
+              const TextField(
                 decoration: const InputDecoration(
                   hintText: 'Search Mahallah...',
                   prefixIcon: Icon(Icons.search, color: Color(0xFFCAC4D0)),

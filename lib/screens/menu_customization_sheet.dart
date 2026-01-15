@@ -43,7 +43,7 @@ class _MenuCustomizationSheetState extends State<MenuCustomizationSheet> {
     final item = ModalRoute.of(context)!.settings.arguments as MenuItem;
 
     return Scaffold(
-      backgroundColor: Colors.black.withOpacity(0.7),
+      backgroundColor: Colors.black.withValues(alpha: 0.7),
       body: Align(
         alignment: Alignment.bottomCenter,
         child: Container(
@@ -226,7 +226,7 @@ class _MenuCustomizationSheetState extends State<MenuCustomizationSheet> {
           color: Color(0xFF4A4458),
           shape: BoxShape.circle,
         ),
-        child: Icon(icon, color: Color(0xFFD0BCFF)),
+        child: Icon(icon, color: const Color(0xFFD0BCFF)),
       ),
     );
   }

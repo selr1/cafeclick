@@ -167,7 +167,7 @@ class _StaffDashboardScreenState extends State<StaffDashboardScreen> {
                         Switch(
                           value: _isOpen,
                           onChanged: (value) => _toggleStallStatus(),
-                          activeColor: const Color(0xFFD0BCFF),
+                          activeThumbColor: const Color(0xFFD0BCFF),
                           activeTrackColor: const Color(0xFF4F378B),
                         ),
                       ],

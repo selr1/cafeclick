@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../mock_data.dart';
 
 // Data Models
 class Mahallah {
@@ -175,22 +174,9 @@ class AppState extends ChangeNotifier {
   void placeOrder() {
     if (_cart.isEmpty) return;
 
-    final total = _cart.reduce((sum, item) {
-      double itemTotal = item.price * item.quantity;
-      if (item.customizations['addEgg'] == true) {
-        itemTotal += 1.00 * item.quantity;
-      }
-      return CartItem(
-        id: 'temp', 
-        name: 'temp', 
-        price: sum.price + itemTotal, 
-        category: '', 
-        image: '', 
-        quantity: 1, 
-        customizations: {}
-      );
-    }).price; // Hacky reduce, better to calculate properly
+    if (_cart.isEmpty) return;
 
+    // Calculate total properly
     double calculatedTotal = 0;
     for (var item in _cart) {
        double itemTotal = item.price * item.quantity;

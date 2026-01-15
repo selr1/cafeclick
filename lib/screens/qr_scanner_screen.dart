@@ -133,14 +133,16 @@ class _QRScannerScreenState extends State<QRScannerScreen> with SingleTickerProv
                       right: 25,
                       child: Container(
                         height: 2,
-                        color: const Color(0xFFD0BCFF),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0xFFD0BCFF).withOpacity(0.5),
-                            blurRadius: 10,
-                            spreadRadius: 2,
-                          ),
-                        ],
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFD0BCFF),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFFD0BCFF).withValues(alpha: 0.5),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
