@@ -13,12 +13,12 @@ class _StaffDashboardScreenState extends State<StaffDashboardScreen> {
   bool _isOpen = true;
   // Mock menu items for editing
   final List<MenuItem> _menuItems = [
-    MenuItem(id: '1', name: 'Nasi Goreng USA', price: 5.50, category: 'rice', image: 'https://images.unsplash.com/photo-1647093953000-9065ed6f85ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXNpJTIwZ29yZW5nJTIwZnJpZWQlMjByaWNlfGVufDF8fHx8MTc2NDU5Mzg1MXww&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: true),
-    MenuItem(id: '2', name: 'Chicken Rice', price: 6.00, category: 'rice', image: 'https://images.unsplash.com/photo-1668665771959-b217076ddde3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZSUyMG1lYWx8ZW58MXx8fHwxNzY0NTk1MjczfDA&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: true),
-    MenuItem(id: '3', name: 'Mee Goreng', price: 5.00, category: 'noodles', image: 'https://images.unsplash.com/photo-1701480253822-1842236c9a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub29kbGUlMjBzb3VwJTIwYXNpYW58ZW58MXx8fHwxNzY0NTk1MjcyfDA&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: true),
-    MenuItem(id: '4', name: 'Chicken Chop', price: 8.50, category: 'western', image: 'https://images.unsplash.com/photo-1651843465180-5965076f7368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXJnZXIlMjBmcmllcyUyMG1lYWx8ZW58MXx8fHwxNzY0NTE5MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: false),
-    MenuItem(id: '5', name: 'Carbonara Pasta', price: 9.00, category: 'western', image: 'https://images.unsplash.com/photo-1680678242896-a8e64cb95b62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXN0ZXJuJTIwcGFzdGElMjBmb29kfGVufDF8fHx8MTc2NDU5NTI3M3ww&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: true),
-    MenuItem(id: '6', name: 'Iced Milo', price: 2.50, category: 'drinks', image: 'https://images.unsplash.com/photo-1717456182579-faa4a7dc84f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpY2VkJTIwZHJpbmslMjBiZXZlcmFnZXxlbnwxfHx8fDE3NjQ1ODQ1NDF8MA&ixlib=rb-4.1.0&q=80&w=1080', isAvailable: true),
+    MenuItem(id: '1', name: 'Nasi Goreng USA', price: 5.50, category: 'rice', image: 'assets/images/nasigorengusa.jpg', isAvailable: true),
+    MenuItem(id: '2', name: 'Chicken Rice', price: 6.00, category: 'rice', image: 'assets/images/chickenrice.jpg', isAvailable: true),
+    MenuItem(id: '3', name: 'Mee Goreng', price: 5.00, category: 'noodles', image: 'assets/images/meegoreng.jpg', isAvailable: true),
+    MenuItem(id: '4', name: 'Chicken Chop', price: 8.50, category: 'western', image: 'assets/images/chickenchop.jpg', isAvailable: false),
+    MenuItem(id: '5', name: 'Carbonara Pasta', price: 9.00, category: 'western', image: 'assets/images/carbonarapasta.jpg', isAvailable: true),
+    MenuItem(id: '6', name: 'Juice', price: 2.50, category: 'drinks', image: 'assets/images/juice.jpg', isAvailable: true),
   ];
 
   String? _editingItemId;

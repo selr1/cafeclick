@@ -33,7 +33,7 @@ export default function StaffDashboard({ user, onLogout, onScanQR }: StaffDashbo
     { id: '3', name: 'Mee Goreng', price: 5.00, category: 'noodles', isAvailable: true },
     { id: '4', name: 'Chicken Chop', price: 8.50, category: 'western', isAvailable: false },
     { id: '5', name: 'Carbonara Pasta', price: 9.00, category: 'western', isAvailable: true },
-    { id: '6', name: 'Iced Milo', price: 2.50, category: 'drinks', isAvailable: true },
+    { id: '6', name: 'Juice', price: 2.50, category: 'drinks', isAvailable: true },
   ]);
 
   const [editingItem, setEditingItem] = useState<string | null>(null);
@@ -104,14 +104,12 @@ export default function StaffDashboard({ user, onLogout, onScanQR }: StaffDashbo
             </div>
             <button
               onClick={toggleStallStatus}
-              className={`relative w-14 h-7 rounded-full transition-colors ${
-                stallStatus.isOpen ? 'bg-[#D0BCFF]' : 'bg-[#49454F]'
-              }`}
+              className={`relative w-14 h-7 rounded-full transition-colors ${stallStatus.isOpen ? 'bg-[#D0BCFF]' : 'bg-[#49454F]'
+                }`}
             >
               <div
-                className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition-transform ${
-                  stallStatus.isOpen ? 'translate-x-7' : ''
-                }`}
+                className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition-transform ${stallStatus.isOpen ? 'translate-x-7' : ''
+                  }`}
               />
             </button>
           </div>
@@ -144,9 +142,8 @@ export default function StaffDashboard({ user, onLogout, onScanQR }: StaffDashbo
             {menuItems.map((item) => (
               <div
                 key={item.id}
-                className={`bg-[#211F26] rounded-xl p-3 ${
-                  !item.isAvailable ? 'opacity-60' : ''
-                }`}
+                className={`bg-[#211F26] rounded-xl p-3 ${!item.isAvailable ? 'opacity-60' : ''
+                  }`}
               >
                 {editingItem === item.id ? (
                   // Edit Mode
@@ -187,11 +184,10 @@ export default function StaffDashboard({ user, onLogout, onScanQR }: StaffDashbo
                       <div className="flex items-center gap-2">
                         <p className="text-[#D0BCFF] text-sm">RM {item.price.toFixed(2)}</p>
                         <span className="text-[#938F99] text-xs">•</span>
-                        <span className={`text-xs px-2 py-0.5 rounded-full ${
-                          item.isAvailable 
-                            ? 'bg-[#1F3823] text-[#A8DAB5]' 
+                        <span className={`text-xs px-2 py-0.5 rounded-full ${item.isAvailable
+                            ? 'bg-[#1F3823] text-[#A8DAB5]'
                             : 'bg-[#601410] text-[#F2B8B5]'
-                        }`}>
+                          }`}>
                           {item.isAvailable ? 'Available' : 'Out of Stock'}
                         </span>
                       </div>
@@ -200,11 +196,10 @@ export default function StaffDashboard({ user, onLogout, onScanQR }: StaffDashbo
                       {/* Availability Toggle */}
                       <button
                         onClick={() => toggleItemAvailability(item.id)}
-                        className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${
-                          item.isAvailable
+                        className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${item.isAvailable
                             ? 'bg-[#49454F] text-[#CAC4D0] hover:bg-[#601410]'
                             : 'bg-[#1F3823] text-[#A8DAB5] hover:bg-[#A8DAB5] hover:text-[#1F3823]'
-                        }`}
+                          }`}
                       >
                         {item.isAvailable ? 'Mark Out' : 'Mark In'}
                       </button>

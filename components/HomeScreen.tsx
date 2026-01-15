@@ -20,7 +20,7 @@ const menuItems: MenuItem[] = [
     name: 'Nasi Goreng USA',
     price: 5.50,
     category: 'rice',
-    image: 'https://images.unsplash.com/photo-1647093953000-9065ed6f85ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXNpJTIwZ29yZW5nJTIwZnJpZWQlMjByaWNlfGVufDF8fHx8MTc2NDU5Mzg1MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/nasigorengusa.jpg',
     popular: true
   },
   {
@@ -28,7 +28,7 @@ const menuItems: MenuItem[] = [
     name: 'Chicken Rice',
     price: 6.00,
     category: 'rice',
-    image: 'https://images.unsplash.com/photo-1668665771959-b217076ddde3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcmljZSUyMG1lYWx8ZW58MXx8fHwxNzY0NTk1MjczfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/chickenrice.jpg',
     popular: true
   },
   {
@@ -36,7 +36,7 @@ const menuItems: MenuItem[] = [
     name: 'Mee Goreng',
     price: 5.00,
     category: 'noodles',
-    image: 'https://images.unsplash.com/photo-1701480253822-1842236c9a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub29kbGUlMjBzb3VwJTIwYXNpYW58ZW58MXx8fHwxNzY0NTk1MjcyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/meegoreng.jpg',
     popular: true
   },
   {
@@ -44,21 +44,21 @@ const menuItems: MenuItem[] = [
     name: 'Chicken Chop',
     price: 8.50,
     category: 'western',
-    image: 'https://images.unsplash.com/photo-1651843465180-5965076f7368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXJnZXIlMjBmcmllcyUyMG1lYWx8ZW58MXx8fHwxNzY0NTE5MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/chickenchop.jpg',
   },
   {
     id: '5',
     name: 'Carbonara Pasta',
     price: 9.00,
     category: 'western',
-    image: 'https://images.unsplash.com/photo-1680678242896-a8e64cb95b62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXN0ZXJuJTIwcGFzdGElMjBmb29kfGVufDF8fHx8MTc2NDU5NTI3M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/carbonarapasta.jpg',
   },
   {
     id: '6',
-    name: 'Iced Milo',
+    name: 'Juice',
     price: 2.50,
     category: 'drinks',
-    image: 'https://images.unsplash.com/photo-1717456182579-faa4a7dc84f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpY2VkJTIwZHJpbmslMjBiZXZlcmFnZXxlbnwxfHx8fDE3NjQ1ODQ1NDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: '/assets/images/juice.jpg',
   },
 ];
 
@@ -143,9 +143,8 @@ export default function HomeScreen({
           <div className="flex items-center justify-around">
             <button
               onClick={() => onTabChange('home')}
-              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-                currentTab === 'home' ? 'bg-[#4A4458]' : ''
-              }`}
+              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'home' ? 'bg-[#4A4458]' : ''
+                }`}
             >
               <Home className={`w-6 h-6 ${currentTab === 'home' ? 'fill-[#D0BCFF] text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
               <span className={`text-xs ${currentTab === 'home' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Home</span>
@@ -153,9 +152,8 @@ export default function HomeScreen({
 
             <button
               onClick={() => onTabChange('menu')}
-              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-                currentTab === 'menu' ? 'bg-[#4A4458]' : ''
-              }`}
+              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'menu' ? 'bg-[#4A4458]' : ''
+                }`}
             >
               <FileText className={`w-6 h-6 ${currentTab === 'menu' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
               <span className={`text-xs ${currentTab === 'menu' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Menu</span>
@@ -176,9 +174,8 @@ export default function HomeScreen({
 
             <button
               onClick={() => onTabChange('profile')}
-              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-                currentTab === 'profile' ? 'bg-[#4A4458]' : ''
-              }`}
+              className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'profile' ? 'bg-[#4A4458]' : ''
+                }`}
             >
               <User className={`w-6 h-6 ${currentTab === 'profile' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
               <span className={`text-xs ${currentTab === 'profile' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Profile</span>
@@ -198,7 +195,7 @@ export default function HomeScreen({
           className="flex items-center gap-2 text-[#D0BCFF] hover:bg-[#2B2930] px-3 py-2 rounded-lg transition-colors"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor" />
           </svg>
           <span className="text-[#D0BCFF]">{mahallah.name}</span>
           <ChevronDown className="w-4 h-4" />
@@ -250,7 +247,7 @@ export default function HomeScreen({
                 </div>
                 <div className="text-[#938F99]">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               </button>
@@ -288,9 +285,8 @@ export default function HomeScreen({
         <div className="flex items-center justify-around">
           <button
             onClick={() => onTabChange('home')}
-            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-              currentTab === 'home' ? 'bg-[#4A4458]' : ''
-            }`}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'home' ? 'bg-[#4A4458]' : ''
+              }`}
           >
             <Home className={`w-6 h-6 ${currentTab === 'home' ? 'fill-[#D0BCFF] text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
             <span className={`text-xs ${currentTab === 'home' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Home</span>
@@ -298,9 +294,8 @@ export default function HomeScreen({
 
           <button
             onClick={() => onTabChange('menu')}
-            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-              currentTab === 'menu' ? 'bg-[#4A4458]' : ''
-            }`}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'menu' ? 'bg-[#4A4458]' : ''
+              }`}
           >
             <FileText className={`w-6 h-6 ${currentTab === 'menu' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
             <span className={`text-xs ${currentTab === 'menu' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Menu</span>
@@ -321,9 +316,8 @@ export default function HomeScreen({
 
           <button
             onClick={() => onTabChange('profile')}
-            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${
-              currentTab === 'profile' ? 'bg-[#4A4458]' : ''
-            }`}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-full transition-colors ${currentTab === 'profile' ? 'bg-[#4A4458]' : ''
+              }`}
           >
             <User className={`w-6 h-6 ${currentTab === 'profile' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`} />
             <span className={`text-xs ${currentTab === 'profile' ? 'text-[#D0BCFF]' : 'text-[#CAC4D0]'}`}>Profile</span>
