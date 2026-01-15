@@ -27,6 +27,9 @@ jobs:
           channel: stable
           flutter-version: '3.24.0'
 
+      - name: Recreate project structure
+        run: flutter create .
+
       - name: Get Flutter dependencies
         run: flutter pub get
 
